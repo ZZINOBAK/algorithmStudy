@@ -12,15 +12,13 @@ public class Main {
         int num;
         int sum = 0;
 
-        int[] test = {20, 7, 23, 19, 10, 15, 25, 8, 13};
-
         for (int i = 0; i < 9; i++) {
-//            num = scanner.nextInt();
-            num = test[i];
+            num = scanner.nextInt();
             inputList.add(num);
             sum += num;
         }
 
+        outer:
         for (int i = 0; i < 8; i++) {
             for (int j = i + 1; j < 9; j++) {
                 int result = sum - inputList.get(i) - inputList.get(j);
@@ -30,13 +28,13 @@ public class Main {
                             outputList.add(inputList.get(x));
                         }
                     }
-                    break;
+                    break outer;
                 }
             }
         }
+
         Collections.sort(outputList);
 
-        System.out.println("출력");
         for (Integer height : outputList) {
             System.out.println(height);
         }
