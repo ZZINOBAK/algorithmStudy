@@ -3,7 +3,7 @@ package org.example;
 import java.util.*;
 
 
-public class Main {
+public class Main_2309 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
