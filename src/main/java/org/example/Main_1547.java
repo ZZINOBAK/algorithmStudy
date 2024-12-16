@@ -13,9 +13,9 @@ public class Main_1547 {
         for (int i = 0; i < changeCount; i++) {
             int cup1 = scanner.nextInt();
             int cup2 = scanner.nextInt();
-            temp = cups.indexOf(cup2);
-            cups.set(cups.indexOf(cup1), cup2);
-            cups.set(temp, cup1);
+            temp = cups.indexOf(cup1);
+            cups.set(cups.indexOf(cup2), cup1);
+            cups.set(temp, cup2);
         }
 
         System.out.println(cups.get(0));
