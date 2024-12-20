@@ -21,19 +21,19 @@ public class Main_14889 {
         }
 
         visit = new boolean[N];
-        dfs(0, 0);
+        combi(0, 0);
 
         System.out.println(min);
     }
 
-    static void dfs(int depth, int start) { //재귀함수
+    static void combi(int depth, int start) { //재귀함수
         if (depth == N/2) {
             diff();
             return;
         }
         for (int i = start; i < N; i++) {
             visit[i] = true;
-            dfs(depth+1, i+1);
+            combi(depth+1, i+1);
             visit[i] = false;
         }
     }
